@@ -9,9 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 public class CICDCont {
-  // http://localhost:9091/cicd?sw=1
   // http://localhost:9091/cicd?sw=-1
   // http://localhost:9091/cicd?sw=0
+  // http://localhost:9091/cicd?sw=1
+  //http://localhost:9091/cicd?sw=2
   @GetMapping("/cicd")
   public String cicd(@RequestParam(defaultValue = "1") Integer sw) {
     String msg = "";
@@ -32,4 +33,3 @@ public class CICDCont {
     
     return "<h3>" + msg + "</h3>";
   }
-}
